@@ -1,0 +1,18 @@
+let currentResult = '';
+let history = [];
+
+function append(value) {
+  currentResult += value;
+  document.getElementById('result').value = currentResult;
+}
+
+function clearResult() {
+  currentResult = '';
+  document.getElementById('result').value = currentResult;
+}
+
+function calculate() {
+  history.push(currentResult);
+  currentResult = eval(currentResult);
+  document.getElementById('result').value = currentResult;
+}
